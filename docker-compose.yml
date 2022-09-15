@@ -1,0 +1,16 @@
+version: "3"
+services:
+  hubjupyter:
+    image: "hubjupyter:v0.1"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: hubjupyter
+    restart: unless-stopped
+    volumes:
+        - ${PWD}/home:/home
+        - ${PWD}/srv:/srv/jupyterhub
+    ports:
+      - "8488:8000"
+    command: jupyterhub 
+        
