@@ -14,3 +14,7 @@ If you want to stop it, use: `docker-compose stop`, and restart use: `docker-com
 
 DO NOT use `docker-compose down`, or your added users will lost.
 
+Use jupyterlab-git:
+
+you need create id_rsa/id_rsa.pub in ~/.ssh, and git clone repo 1st time, then jupyterlab-git can function. 
+
