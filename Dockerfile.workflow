@@ -8,5 +8,9 @@ RUN apt update; apt install -y git graphviz \
   && mkdir -p /usr/lib/python3/dist-packages/matplotlib/mpl-data/fonts/ttf \
   && ln -s /usr/share/fonts/simhei.ttf /usr/lib/python3/dist-packages/matplotlib/mpl-data/fonts/ttf/ \
   && mkdir -p /usr/share/fonts/truetype/noto \
-  && ln -s /usr/share/fonts/simhei.ttf /usr/share/fonts/truetype/noto/
+  && ln -s /usr/share/fonts/simhei.ttf /usr/share/fonts/truetype/noto/ \
+  && useradd -m user1 -p `openssl passwd -1 -salt 'salt' thepasswd`
 COPY matplotlibrc /usr/lib/python3/dist-packages/matplotlib/mpl-data/
+
+# useradd -m user1 -p `openssl passwd -1 -salt 'salt' thepasswd`
+# useradd -m user2 -p `openssl passwd -1 thepasswd`
