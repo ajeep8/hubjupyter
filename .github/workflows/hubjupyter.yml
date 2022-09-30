@@ -15,7 +15,7 @@ jobs:
     #- name: Build the Docker image
     #  run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     - name: checkout repo
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
 
     - name: Set up QEMU
       uses: docker/setup-qemu-action@v1
@@ -33,7 +33,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: ./
-        file: ./Dockerfile
+        file: ./Dockerfile.workflow
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/hubjupyter:test
           
