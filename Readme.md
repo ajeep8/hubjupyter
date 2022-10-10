@@ -27,3 +27,23 @@ DO NOT use `docker-compose down`, or your added users and packages will lost.
 
 you need create id_rsa/id_rsa.pub in ~/.ssh, and git clone repo 1st time, then jupyterlab-git can function. 
 
+# Debug
+
+## matplotlib Chinese
+
+```
+pip show matplotlib
+```
+
+find the matplotlib path, and copy simhei.ttf(mpl-data/fonts/ttf) & matplotlibrc(mpl-data) there
+
+```
+# matplotlibrc
+font.family: sans-serif
+font.serif: SimHei, DejaVu Serif, Bitstream Vera Serif,......
+axes.unicode_minus: False
+```
+
+## Spawn failed
+
+/home/sam not belong to the just added sam.

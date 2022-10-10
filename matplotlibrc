@@ -342,7 +342,7 @@ font.serif:    SimHei,  DejaVu Serif, Bitstream Vera Serif, Computer Modern Roma
 #mathtext.bf:  sans:bold
 #mathtext.cal: cursive
 #mathtext.it:  sans:italic
-#mathtext.rm:  sans
+mathtext.rm:  SimHei  #sans
 #mathtext.sf:  sans
 #mathtext.tt:  monospace
 #mathtext.fallback: cm  # Select fallback font from ['cm' (Computer Modern), 'stix'
