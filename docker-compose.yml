@@ -9,5 +9,6 @@ services:
         - ${PWD}/srv:/srv/jupyterhub
     ports:
       - "8488:8000"
+      - "8489:8001"
     command: jupyterhub 
         
