@@ -37,5 +37,5 @@ jobs:
         context: ./
         file: ./Dockerfile.workflow
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/hubjupyter:test
-          
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/hubjupyter:${{ github.ref_name }}
+
